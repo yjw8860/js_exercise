@@ -1,0 +1,89 @@
+@import url("reset.css");
+
+.img_container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+}
+
+.box {
+  width: 33%;
+  height: 600px;
+  border: 1px solid black;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+}
+
+#left_img {
+  left: -628px;
+}
+
+#right_img {
+  left: 628px;
+}
+
+.top {
+  z-index: 1;
+  background-color: white;
+}
+
+.bottom {
+  position: relative;
+  z-index: 0;
+}
+
+.slide_btn {
+  position: absolute;
+  top: 288px;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+#btn_left {
+  padding: 5px 12.5px;
+  right: 80px;
+}
+
+#btn_pause {
+  padding: 5px 6.875px;
+  right: 40px;
+}
+
+#btn_right {
+  padding: 5px 12.5px;
+  right: 0px;
+}
+
+@keyframes slideLeftAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-628px);
+  }
+}
+
+@keyframes slideRightAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(628px);
+  }
+}
+
+.slideLeftClass {
+  animation: slideLeftAnimation 0.3s ease-in-out forwards;
+}
+
+.slideRightClass {
+  animation: slideRightAnimation 0.3s ease-in-out forwards;
+}
